@@ -7,7 +7,7 @@ public enum Difficult {
     HARD("Очень сложный уровень", 9, 550);
     private final int speed;
     private final String name;
-    private final int distance;
+    private  int distance;
 
 
     Difficult( String name,int speed, int distance) {
@@ -16,6 +16,9 @@ public enum Difficult {
         this.distance = distance;
     }
 
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
 
     public int getSpeed() {
         return speed;

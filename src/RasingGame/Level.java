@@ -4,7 +4,7 @@ public class Level {
    private  final int speed;
     private final int distance;
    private final String name;
-  private final   Difficult diff;
+    Difficult diff;
 
     public Difficult getDiff() {
         return diff;
@@ -17,5 +17,15 @@ public class Level {
         name = diff.getName();
     }
 
+    public int getSpeed() {
+        return speed;
+    }
 
+    public int getDistance() {
+        return distance;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

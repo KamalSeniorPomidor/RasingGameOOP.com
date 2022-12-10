@@ -14,7 +14,7 @@ public class Render {
         clearCmd();
         int[][] temp = Start.road.createRoad();
         LayerModelCarImpl.printCar(new Player(), temp);
-        LayerObstacle.printTree(Start.road.getObstacles(), temp);
+        LayerObstacle.printCar(Start.road.getObstacles(), temp);
         System.out.println("--------------------------------------------------------------");
         for (int i = 0; i < Start.road.getRoad().length; i++) {
             for (int j = 0; j < Start.road.getRoad()[0].length; j++) {

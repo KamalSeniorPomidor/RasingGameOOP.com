@@ -8,17 +8,14 @@ public class LayerRoad {
     private final LayerObstacle obstacleTouch = new LayerObstacle();
     public final ArrayList<LayerObstacle> obstacles = new ArrayList<>();
 
-    public LayerRoad(int[][] car, ArrayList<LayerObstacle> woods) {
-    }
-
-
     public final int[][] road = new int[HEIGHT][WIDTH];
 
     /***
      * Метод создания матрицы дороги
      */
 
-
+    public LayerRoad(int[][] car, ArrayList<LayerObstacle> woods) {
+    }
     public int[][] createRoad() {
         int[][] temp = new int[HEIGHT][WIDTH];
         for (int i = 0; i < HEIGHT; i++) {

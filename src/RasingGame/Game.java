@@ -8,7 +8,6 @@ import RasingGame.Layers.LayerCars.Vaz2107;
 import java.util.Scanner;
 
 public class Game {
-    Difficult difficult;
     private final String START_TEXT = "Добро пожаловать в игру Racing";
 
     private Player player;
@@ -58,17 +57,23 @@ public class Game {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите номер автомобиля");
         int position = input.nextInt();
-        if (position == 1) {
-            return new BmwM5().modelCar();
-        } else if (position == 2) {
-            return new Vaz2107().modelCar();
-        } else if (position == 3) {
-            return new Kamaz().modelCar();
-        } else if (position == 4) {
-            return new AudiQ8().modelCar();
-        } else {
-            System.out.println("Введите корректный номер автомоблия");
-            return choiceCar();
+        switch (position) {
+            case 1 -> {
+                return new BmwM5().modelCar();
+            }
+            case 2 -> {
+                return new Vaz2107().modelCar();
+            }
+            case 3 -> {
+                return new Kamaz().modelCar();
+            }
+            case 5 -> {
+                return new AudiQ8().modelCar();
+            }
+            default -> {
+                System.out.println("Введите корректный номер автомоблия");
+                return choiceCar();
+            }
         }
     }
 
@@ -90,18 +95,24 @@ public class Game {
                 |......................|""");
         System.out.println();
         System.out.println("Введите номер уровня");
-        int position = 3;
-        if (position == 1) {
-            return new Level(Difficult.EASY);
-        } else if (position == 2) {
-            return new Level(Difficult.MEDIUM);
-        } else if (position == 3) {
-            return new Level(Difficult.HIGH);
-        } else if (position == 4) {
-            return new Level(Difficult.HARD);
-        } else {
-            System.out.println("Введите корректное число");
-            return choiceLevel();
+        int position = input.nextInt();
+        switch (position) {
+            case 1 -> {
+                return new Level(Difficult.EASY);
+            }
+            case 2 -> {
+                return new Level(Difficult.MEDIUM);
+            }
+            case 3 -> {
+                return new Level(Difficult.HIGH);
+            }
+            case 5 -> {
+                return new Level(Difficult.HARD);
+            }
+            default -> {
+                System.out.println("Введите корректный номер автомоблия");
+                return choiceLevel();
+            }
         }
     }
 
