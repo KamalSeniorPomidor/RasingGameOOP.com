@@ -1,6 +1,7 @@
 package RasingGame.Layers.LayerCars;
 
 public class AudiQ8 extends LayerModelCarImpl{
+    private  int [][] car;
     public AudiQ8() {
     }
 
@@ -9,13 +10,14 @@ public class AudiQ8 extends LayerModelCarImpl{
      */
     @Override
     public int[][] modelCar() {
-        return new int[][]{
+        car =  new int[][]{
                 {3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
                 {3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
                 {0, 0, 0, 3, 3, 3, 3, 0, 0, 0},
                 {0, 0, 0, 3, 3, 3, 3, 0, 0, 0},
                 {0, 0, 0, 3, 3, 3, 3, 0, 0, 0},
                 {3, 3, 3, 3, 3, 3, 3, 3, 3, 3},};
+        return car;
     }
 
 }

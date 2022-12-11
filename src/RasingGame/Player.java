@@ -2,8 +2,8 @@ package RasingGame;
 
 public class Player {
     Level level;
-    int x;
-    int y;
+    private int x;
+    private int y;
 
     private String name;
     int[][] car;
@@ -16,11 +16,7 @@ public class Player {
      */
     public Player(String name) {
         this.x = 24;
-        this.y = 23;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+        this.y = 38;
     }
 
     public Level getLevel() {

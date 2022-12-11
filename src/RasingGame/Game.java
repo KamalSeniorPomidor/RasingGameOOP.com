@@ -67,7 +67,7 @@ public class Game {
             case 3 -> {
                 return new Kamaz().modelCar();
             }
-            case 5 -> {
+            case 4 -> {
                 return new AudiQ8().modelCar();
             }
             default -> {
@@ -106,7 +106,7 @@ public class Game {
             case 3 -> {
                 return new Level(Difficult.HIGH);
             }
-            case 5 -> {
+            case 4 -> {
                 return new Level(Difficult.HARD);
             }
             default -> {

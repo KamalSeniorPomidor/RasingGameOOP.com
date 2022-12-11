@@ -1,14 +1,10 @@
 package RasingGame;
 
 public class Level {
-   private  final int speed;
+    private final double speed;
     private final int distance;
-   private final String name;
-    Difficult diff;
-
-    public Difficult getDiff() {
-        return diff;
-    }
+    private final String name;
+    private final Difficult diff;
 
     public Level(Difficult diff) {
         this.diff = diff;
@@ -17,7 +13,12 @@ public class Level {
         name = diff.getName();
     }
 
-    public int getSpeed() {
+    public Difficult getDiff() {
+        return diff;
+    }
+
+
+    public double getSpeed() {
         return speed;
     }
 

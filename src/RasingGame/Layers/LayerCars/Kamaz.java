@@ -1,6 +1,7 @@
 package RasingGame.Layers.LayerCars;
 
-public class Kamaz extends LayerModelCarImpl{
+public class Kamaz extends LayerModelCarImpl {
+    private  int [][] car;
     public Kamaz() {
     }
 
@@ -9,7 +10,7 @@ public class Kamaz extends LayerModelCarImpl{
      */
     @Override
     public int[][] modelCar() {
-        return new int[][]{
+        car = new int[][]{
                 {0, 0, 3, 3, 3, 3, 3, 0, 0,0},
                 {0, 0, 3, 3, 3, 3, 3, 0, 0,0},
                 {3, 3, 3, 3, 3, 3, 3, 3, 3,0},
@@ -17,5 +18,6 @@ public class Kamaz extends LayerModelCarImpl{
                 {3, 3, 3, 3, 3, 3, 3, 3, 3,0},
                 {3, 3, 3, 3, 3, 3, 3, 3, 3,0},
         };
+        return car;
     }
 }

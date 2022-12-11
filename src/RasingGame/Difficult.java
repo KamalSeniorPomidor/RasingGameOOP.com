@@ -1,16 +1,16 @@
 package RasingGame;
 
 public enum Difficult {
-    EASY("Легкий уровень", 3, 150),
-    MEDIUM("Средний уровень", 5, 300),
-    HIGH("Сложный уровень", 7, 400),
-    HARD("Очень сложный уровень", 9, 550);
-    private final int speed;
+    EASY("Легкий уровень", 2, 150),
+    MEDIUM("Средний уровень", 3, 300),
+    HIGH("Сложный уровень", 4, 400),
+    HARD("Очень сложный уровень", 5, 550);
+    private final double speed;
     private final String name;
-    private  int distance;
+    private int distance;
 
 
-    Difficult( String name,int speed, int distance) {
+    Difficult(String name, double speed, int distance) {
         this.name = name;
         this.speed = speed;
         this.distance = distance;
@@ -20,7 +20,7 @@ public enum Difficult {
         this.distance = distance;
     }
 
-    public int getSpeed() {
+    public double getSpeed() {
         return speed;
     }
 

@@ -1,12 +1,15 @@
 package RasingGame.Layers;
 
+import RasingGame.Layers.LayersObstacle.LayerCar;
+import RasingGame.Layers.LayersObstacle.LayerTree;
+
 import java.util.ArrayList;
 
 public class LayerRoad {
-    private final int HEIGHT = 30;
+    private final int HEIGHT = 45;
     private final int WIDTH = 59;
-    private final LayerObstacle obstacleTouch = new LayerObstacle();
-    public final ArrayList<LayerObstacle> obstacles = new ArrayList<>();
+    public final ArrayList<LayerCar> cars = new ArrayList<>();
+    public final ArrayList<LayerTree> trees =  new ArrayList<>();
 
     public final int[][] road = new int[HEIGHT][WIDTH];
 
@@ -14,25 +17,27 @@ public class LayerRoad {
      * Метод создания матрицы дороги
      */
 
-    public LayerRoad(int[][] car, ArrayList<LayerObstacle> woods) {
+    public LayerRoad(int[][] car, ArrayList<LayerCar> cars, ArrayList<LayerTree> trees) {
     }
     public int[][] createRoad() {
-        int[][] temp = new int[HEIGHT][WIDTH];
+        int[][] matrix = new int[HEIGHT][WIDTH];
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < 30; j++) {
-                temp[i][0] = road[i][0] = 1;
-                temp[i][19] = road[i][19] = 1;
-                temp[i][39] = road[i][39] = 1;
-                temp[i][58] = road[i][58] = 1;
+                matrix[i][0] = road[i][0] = 1;
+                matrix[i][19] = road[i][19] = 1;
+                matrix[i][39] = road[i][39] = 1;
+                matrix[i][58] = road[i][58] = 1;
             }
         }
-        return temp;
+        return matrix;
     }
 
-    public ArrayList<LayerObstacle> getObstacles() {
-        return obstacles;
+    public ArrayList<LayerCar> getCars() {
+        return cars;
     }
-
+    public ArrayList<LayerTree> getTrees() {
+        return trees;
+    }
 
     public int getHEIGHT() {
         return HEIGHT;

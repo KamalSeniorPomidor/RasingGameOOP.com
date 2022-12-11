@@ -10,6 +10,7 @@ public interface Drivable {
             Start.game.getPlayer().setX(Start.game.getPlayer().getX() - 20);
         }
     }
+
     /**
      * Метод изменения координат машины для смещения вправо
      */
